@@ -40,7 +40,7 @@ public class BlockDoll extends Block {
         if (!level.isClientSide) {
             if (level.dimensionType().bedWorks()) {
                 level.playLocalSound(null, SoundEvents.BREEZE_HURT, SoundSource.MASTER, 1f, 5f);
-                player.sendSystemMessage(Component.literal("Oiiaioooooiai"));
+                player.sendSystemMessage(Component.translatable("block.fseplayerstuff.block_doll.interact"));
                 return InteractionResult.SUCCESS;
             }
         }

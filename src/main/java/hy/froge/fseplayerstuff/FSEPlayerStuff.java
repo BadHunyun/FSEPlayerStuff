@@ -2,6 +2,8 @@ package hy.froge.fseplayerstuff;
 
 import com.mojang.logging.LogUtils;
 import hy.froge.fseplayerstuff.registeries.ModBlocks;
+import hy.froge.fseplayerstuff.registeries.ModCreativeTabs;
+import hy.froge.fseplayerstuff.registeries.ModItems;
 import net.neoforged.bus.api.IEventBus;
 import net.neoforged.fml.ModContainer;
 import net.neoforged.fml.common.Mod;
@@ -14,5 +16,7 @@ public class FSEPlayerStuff {
 
     public FSEPlayerStuff(IEventBus modEventBus, ModContainer modContainer) {
         ModBlocks.DEFERRED_REGISTER.register(modEventBus);
+        ModItems.DEFERRED_REGISTER.register(modEventBus);
+        ModCreativeTabs.DEFERRED_REGISTER.register(modEventBus);
     }
 }
