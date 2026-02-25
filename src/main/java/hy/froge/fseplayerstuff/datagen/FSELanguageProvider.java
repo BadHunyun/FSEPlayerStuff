@@ -13,7 +13,8 @@ public class FSELanguageProvider extends LanguageProvider {
 
     @Override
     protected void addTranslations() {
-        ModBlocks.MOD_BLOCKS.forEach((k, v) -> add(k.value(), v));
-        ModItems.MOD_ITEMS.forEach((k, v) -> add(k.value(), v));
+        ModBlocks.MOD_BLOCKS.forEach((k, v) -> addBlock(k::value, v));
+        ModItems.MOD_ITEMS.forEach((k, v) -> addItem(k::value, v));
+        add("item.fseplayerstuff.brust_alloy_pickaxe.tooltip", "A Pickaxe");
     }
 }
