@@ -15,6 +15,8 @@ public class FSELanguageProvider extends LanguageProvider {
     protected void addTranslations() {
         ModBlocks.MOD_BLOCKS.forEach((k, v) -> addBlock(k::value, v));
         ModItems.MOD_ITEMS.forEach((k, v) -> addItem(k::value, v));
+        add("block.fseplayerstuff.block_doll.interact", "This is a doll.");
         add("item.fseplayerstuff.brust_alloy_pickaxe.tooltip", "A Pickaxe");
+        add("item.fseplayerstuff.huge_wrench.tooltip", "A Huge wrench, which can deals Integer.MAX_VALUE DMG");
     }
 }
