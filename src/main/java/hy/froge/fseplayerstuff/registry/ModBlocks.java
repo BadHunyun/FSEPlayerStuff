@@ -18,12 +18,18 @@ public class ModBlocks {
 
     public static Map<Holder<Block>, String> MOD_BLOCKS = new HashMap<>();
 
-    public static final Holder<Block> COMPRESSED_NETHERRACK = register("compressed_netherrack", "Compressed Netherrack", () -> new Block(BlockBehaviour.Properties.of().sound(SoundType.NETHERRACK)));
+    public static final Holder<Block> COMPRESSED_NETHERRACK = register("compressed_netherrack", "Compressed Netherrack", BlockBehaviour.Properties.of().sound(SoundType.NETHERRACK));
+    public static final Holder<Block> RAW_IMMORTAL_BLOCK = register("raw_immortal_block", "Raw Immortal Block", BlockBehaviour.Properties.of());
+    public static final Holder<Block> IMMORTAL_BLOCK = register("immortal_block", "Block of Immotral", BlockBehaviour.Properties.of());
     public static final Holder<Block> N_FESH_DOLL = register("n_fesh_doll", "N_FeSH Doll", () -> new BlockDoll(BlockBehaviour.Properties.of().destroyTime(3f)));
 
     private static Holder<Block> register(String id, String name, @NotNull final Supplier<? extends Block> blockSup) {
         Holder<Block> target = DEFERRED_REGISTER.register(id, blockSup);
         MOD_BLOCKS.put(target, name);
         return target;
+    }
+
+    private static Holder<Block> register(String id, String name, @NotNull BlockBehaviour.Properties properties) {
+        return register(id, name,() -> new Block(properties));
     }
 }

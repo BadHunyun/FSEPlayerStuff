@@ -7,6 +7,7 @@ import net.minecraft.core.Holder;
 import net.minecraft.core.registries.Registries;
 import net.minecraft.world.item.*;
 import net.minecraft.world.level.block.Block;
+import net.minecraft.world.level.block.state.BlockBehaviour;
 import net.neoforged.neoforge.registries.DeferredRegister;
 import org.jetbrains.annotations.NotNull;
 
@@ -39,6 +40,7 @@ public class ModItems {
     public static final Holder<Item> NIGHT_CREST = registerSimpleItem("night_crest", "Night Crest");
     public static final Holder<Item> NIGHTMARE = registerSimpleItem("nightmare", "Nightmare");
     public static final Holder<Item> OCEAN_UPGRADE_SMITHING_TEMPLATE = registerSimpleItem("ocean_upgrade_smithing_template", "Ocean Upgrade Smithing Template");
+    public static final Holder<Item> RAW_IMMORTAL_BLOCK = registerSimpleItem("raw_immortal_block", "Raw Immortal Block");
     public static final Holder<Item> SOUL_SEVERING_PICKAXE = register("soul_severing_pickaxe", "Soul Severing Pickaxe", () -> new PickaxeItem(Tiers.NETHERITE, new Item.Properties()));
     public static final Holder<Item> TIO_UPGRADE_SMITHING_TEMPLATE = registerSimpleItem("three_in_one_upgrade_smithing_template", "3 in 1 Upgrade Smithing template");
     public static final Holder<Item> TRIDENT_HEAD = registerSimpleItem("trident_head", "Trident Head");
