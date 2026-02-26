@@ -19,6 +19,7 @@ public class ModItems {
 
     public static Map<Holder<Item>, String> MOD_ITEMS = new HashMap<>();
 
+    public static final Holder<Item> COMPRESSED_NETHERRACK = registerSimpleBlockItem("compressed_netherrack", ModBlocks.COMPRESSED_NETHERRACK);
     public static final Holder<Item> CREST_UPGRADE_SMITHING_TEMPLATE = registerSimpleItem("crest_upgrade_smithing_template", "Crest Upgrade Smithing Template");
     public static final Holder<Item> DIAMOND_ALLOY = registerSimpleItem("diamond_alloy_ingot", "Diamond Alloy Ingot");
     public static final Holder<Item> DIAMOND_ALLOY_PICKAXE = register("diamond_alloy_pickaxe", "Diamond Alloy Pickaxe", () -> new DiamondAlloyPickaxeItem(new Item.Properties().attributes(PickaxeItem.createAttributes(DiamondAlloyPickaxeItem.TIER, 3f, 4f))));
@@ -34,7 +35,7 @@ public class ModItems {
     public static final Holder<Item> HUGE_WRENCH = register("huge_wrench", "Huge Wrench", () -> new ItemHugeWrench(new Item.Properties().rarity(Rarity.EPIC).durability(1)));
     public static final Holder<Item> MALACHITE_REAT_SWORD = register("malachite_reat_sword", "Malachite Rest Sword", () -> new Item(new Item.Properties()));
     public static final Holder<Item> MIRROR_CORE = registerSimpleItem("mirror_core", "Mirror Core");
-    public static final Holder<Item> N_FESH_DOLL = registerSimpleBlockItem("n_fesh_doll", ModBlocks.N_FESH_DOLL, new Item.Properties());
+    public static final Holder<Item> N_FESH_DOLL = registerSimpleBlockItem("n_fesh_doll", ModBlocks.N_FESH_DOLL);
     public static final Holder<Item> NIGHT_CREST = registerSimpleItem("night_crest", "Night Crest");
     public static final Holder<Item> NIGHTMARE = registerSimpleItem("nightmare", "Nightmare");
     public static final Holder<Item> OCEAN_UPGRADE_SMITHING_TEMPLATE = registerSimpleItem("ocean_upgrade_smithing_template", "Ocean Upgrade Smithing Template");
@@ -53,7 +54,11 @@ public class ModItems {
         return register(id, name, () -> new Item(new Item.Properties()));
     }
 
-    private static Holder<Item> registerSimpleBlockItem(String id, @NotNull final Holder<Block> blockHolder, Item.Properties itemProp) {
-        return DEFERRED_REGISTER.register(id, () -> new BlockItem(blockHolder.value(), itemProp));
+    private static Holder<Item> registerBlockItem(String id, @NotNull Holder<Block> blockHolder, Item.Properties properties) {
+        return DEFERRED_REGISTER.register(id, () -> new BlockItem(blockHolder.value(), properties));
+    }
+
+    private static Holder<Item> registerSimpleBlockItem(String id, @NotNull final Holder<Block> blockHolder) {
+        return DEFERRED_REGISTER.register(id, () -> new BlockItem(blockHolder.value(), new Item.Properties()));
     }
 }

@@ -1,8 +1,12 @@
 package hy.froge.fseplayerstuff.datagen;
 
 import hy.froge.fseplayerstuff.FSEPlayerStuff;
+import hy.froge.fseplayerstuff.registry.ModBlocks;
 import hy.froge.fseplayerstuff.registry.ModItems;
 import net.minecraft.data.PackOutput;
+import net.minecraft.resources.ResourceLocation;
+import net.neoforged.neoforge.client.model.generators.BlockModelProvider;
+import net.neoforged.neoforge.client.model.generators.BlockStateProvider;
 import net.neoforged.neoforge.client.model.generators.ItemModelProvider;
 import net.neoforged.neoforge.common.data.ExistingFileHelper;
 
@@ -36,6 +40,17 @@ public class FSEModelProvider {
             basicItem(ModItems.TIO_UPGRADE_SMITHING_TEMPLATE.value());
             basicItem(ModItems.TRIDENT_HEAD.value());
             basicItem(ModItems.UPGRADE_CORE.value());
+        }
+    }
+
+    public static class StateProvider extends BlockStateProvider {
+        public StateProvider(PackOutput output, ExistingFileHelper existingFileHelper) {
+            super(output, FSEPlayerStuff.MOD_ID, existingFileHelper);
+        }
+
+        @Override
+        protected void registerStatesAndModels() {
+            simpleBlockWithItem(ModBlocks.COMPRESSED_NETHERRACK.value(), cubeAll(ModBlocks.COMPRESSED_NETHERRACK.value()));
         }
     }
 }
