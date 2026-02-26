@@ -34,13 +34,14 @@ public class ModItems {
     public static final Holder<Item> GLASS_CREST_CORE = registerSimpleItem("glass_crest_core", "Glass Crest Core");
     public static final Holder<Item> HEAVY_UPGRADE_SMITHING_TEMPLATE = registerSimpleItem("heavy_upgrade_smithing_template", "Heavy Upgrade Smithing Template");
     public static final Holder<Item> HUGE_WRENCH = register("huge_wrench", "Huge Wrench", () -> new ItemHugeWrench(new Item.Properties().rarity(Rarity.EPIC).durability(1)));
+    public static final Holder<Item> IMMOTRAL_BLOCK = registerSimpleBlockItem("immotral_block", ModBlocks.IMMORTAL_BLOCK);
     public static final Holder<Item> MALACHITE_REAT_SWORD = register("malachite_reat_sword", "Malachite Rest Sword", () -> new Item(new Item.Properties()));
     public static final Holder<Item> MIRROR_CORE = registerSimpleItem("mirror_core", "Mirror Core");
     public static final Holder<Item> N_FESH_DOLL = registerSimpleBlockItem("n_fesh_doll", ModBlocks.N_FESH_DOLL);
     public static final Holder<Item> NIGHT_CREST = registerSimpleItem("night_crest", "Night Crest");
     public static final Holder<Item> NIGHTMARE = registerSimpleItem("nightmare", "Nightmare");
     public static final Holder<Item> OCEAN_UPGRADE_SMITHING_TEMPLATE = registerSimpleItem("ocean_upgrade_smithing_template", "Ocean Upgrade Smithing Template");
-    public static final Holder<Item> RAW_IMMORTAL_BLOCK = registerSimpleItem("raw_immortal_block", "Raw Immortal Block");
+    public static final Holder<Item> RAW_IMMORTAL_BLOCK = registerSimpleBlockItem("raw_immortal_block", ModBlocks.RAW_IMMORTAL_BLOCK);
     public static final Holder<Item> SOUL_SEVERING_PICKAXE = register("soul_severing_pickaxe", "Soul Severing Pickaxe", () -> new PickaxeItem(Tiers.NETHERITE, new Item.Properties()));
     public static final Holder<Item> TIO_UPGRADE_SMITHING_TEMPLATE = registerSimpleItem("three_in_one_upgrade_smithing_template", "3 in 1 Upgrade Smithing template");
     public static final Holder<Item> TRIDENT_HEAD = registerSimpleItem("trident_head", "Trident Head");
