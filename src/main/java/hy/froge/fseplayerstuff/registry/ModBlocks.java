@@ -1,4 +1,4 @@
-package hy.froge.fseplayerstuff.registeries;
+package hy.froge.fseplayerstuff.registry;
 
 import hy.froge.fseplayerstuff.FSEPlayerStuff;
 import hy.froge.fseplayerstuff.block.BlockDoll;

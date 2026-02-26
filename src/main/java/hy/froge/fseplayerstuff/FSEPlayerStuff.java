@@ -1,9 +1,9 @@
 package hy.froge.fseplayerstuff;
 
 import com.mojang.logging.LogUtils;
-import hy.froge.fseplayerstuff.registeries.ModBlocks;
-import hy.froge.fseplayerstuff.registeries.ModCreativeTabs;
-import hy.froge.fseplayerstuff.registeries.ModItems;
+import hy.froge.fseplayerstuff.registry.ModBlocks;
+import hy.froge.fseplayerstuff.registry.ModCreativeTabs;
+import hy.froge.fseplayerstuff.registry.ModItems;
 import net.neoforged.bus.api.IEventBus;
 import net.neoforged.fml.ModContainer;
 import net.neoforged.fml.common.Mod;
