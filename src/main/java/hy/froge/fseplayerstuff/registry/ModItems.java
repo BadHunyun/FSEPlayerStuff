@@ -25,7 +25,7 @@ public class ModItems {
     public static final Holder<Item> DRACONIC_TWIN_SWORD = register("draconic_twin_sword", "Draconic Twin Sword", () -> new Item(new Item.Properties()));
     public static final Holder<Item> DREAM_FLAYER = register("dreamflayer", "Dreamflayer", () -> new Item(new Item.Properties()));
     public static final Holder<Item> ECHO_SHADOW = register("echo_shadow", "Echo Shadow", () -> new Item(new Item.Properties()));
-    public static final Holder<Item> ENDLESS = register("endless", "Endless", () -> new Item(new Item.Properties()));
+    public static final Holder<Item> ENDNESS = register("endness", "Endness", () -> new Item(new Item.Properties()));
     public static final Holder<Item> FORGED_UPGRADE_SMITHING_TEMPLATE = registerSimpleItem("forged_upgrade_smithing_template", "Forged Upgrade Smithing Template");
     public static final Holder<Item> FORK_CORE = registerSimpleItem("fork_core", "Fork Core");
     public static final Holder<Item> GLASS_CREST = registerSimpleItem("glass_crest", "Glass Crest");

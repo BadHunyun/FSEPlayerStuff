@@ -1,0 +1,6 @@
+{
+  "parent": "minecraft:item/generated",
+  "textures": {
+    "layer0": "fseplayerstuff:item/three_in_one_upgrade_smithing_template"
+  }
+}

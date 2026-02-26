@@ -1,0 +1,6 @@
+{
+  "parent": "minecraft:item/generated",
+  "textures": {
+    "layer0": "fseplayerstuff:item/soul_severing_pickaxe"
+  }
+}

@@ -1,10 +1,8 @@
 package hy.froge.fseplayerstuff.datagen;
 
 import hy.froge.fseplayerstuff.FSEPlayerStuff;
-import hy.froge.fseplayerstuff.registry.ModBlocks;
 import hy.froge.fseplayerstuff.registry.ModItems;
 import net.minecraft.data.PackOutput;
-import net.neoforged.fml.common.Mod;
 import net.neoforged.neoforge.client.model.generators.ItemModelProvider;
 import net.neoforged.neoforge.common.data.ExistingFileHelper;
 
@@ -23,7 +21,7 @@ public class FSEModelProvider {
             basicItem(ModItems.DRACONIC_TWIN_SWORD.value());
             basicItem(ModItems.DREAM_FLAYER.value());
             basicItem(ModItems.ECHO_SHADOW.value());
-            basicItem(ModItems.ENDLESS.value());
+            basicItem(ModItems.ENDNESS.value());
             basicItem(ModItems.FORGED_UPGRADE_SMITHING_TEMPLATE.value());
             basicItem(ModItems.FORK_CORE.value());
             basicItem(ModItems.GLASS_CREST.value());
