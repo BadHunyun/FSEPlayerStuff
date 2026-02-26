@@ -27,5 +27,6 @@ public class FSEDataGenerator extends DataGenerator {
         CompletableFuture<HolderLookup.Provider> lookupProvider = event.getLookupProvider();
 
         generator.addProvider(event.includeClient(), new FSELanguageProvider(output));
+        generator.addProvider(event.includeClient(), new FSEModelProvider.ItemProvider(output, existingFileHelper));
     }
 }

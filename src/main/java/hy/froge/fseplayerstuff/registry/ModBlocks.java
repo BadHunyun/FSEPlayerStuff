@@ -5,6 +5,7 @@ import hy.froge.fseplayerstuff.block.BlockDoll;
 import net.minecraft.core.Holder;
 import net.minecraft.core.registries.Registries;
 import net.minecraft.world.level.block.Block;
+import net.minecraft.world.level.block.SoundType;
 import net.minecraft.world.level.block.state.BlockBehaviour;
 import net.neoforged.neoforge.registries.DeferredRegister;
 import org.jetbrains.annotations.NotNull;
@@ -17,7 +18,7 @@ public class ModBlocks {
 
     public static Map<Holder<Block>, String> MOD_BLOCKS = new HashMap<>();
 
-
+    public static final Holder<Block> COMPRESSED_NETHERRACK = register("compressed_netherack", "Compressed Netherrack", () -> new Block(BlockBehaviour.Properties.of().sound(SoundType.NETHERRACK)));
     public static final Holder<Block> N_FESH_DOLL = register("n_fesh_doll", "N_FeSH Doll", () -> new BlockDoll(BlockBehaviour.Properties.of().destroyTime(3f)));
 
     private static Holder<Block> register(String id, String name, @NotNull final Supplier<? extends Block> blockSup) {
