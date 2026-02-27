@@ -1,43 +1,40 @@
-package hy.froge.fseplayerstuff.item.brust;
+package hy.froge.fseplayerstuff.item.adamantium;
 
-import net.minecraft.tags.BlockTags;
 import net.minecraft.tags.TagKey;
 import net.minecraft.world.item.Tier;
 import net.minecraft.world.item.crafting.Ingredient;
 import net.minecraft.world.level.block.Block;
-import net.neoforged.neoforge.common.Tags;
-import org.jetbrains.annotations.NotNull;
 
-public class BrustTier {
+public class AdamantiumTier {
     public static final Tier TIER = new Tier() {
         @Override
         public int getUses() {
-            return 250;
+            return 256;
         }
 
         @Override
         public float getSpeed() {
-            return 6;
+            return 3;
         }
 
         @Override
         public float getAttackDamageBonus() {
-            return 2;
+            return 1;
         }
 
         @Override
-        public @NotNull TagKey<Block> getIncorrectBlocksForDrops() {
-            return BlockTags.AIR;
+        public TagKey<Block> getIncorrectBlocksForDrops() {
+            return null;
         }
 
         @Override
         public int getEnchantmentValue() {
-            return 14;
+            return 1;
         }
 
         @Override
-        public @NotNull Ingredient getRepairIngredient() {
-            return Ingredient.of(Tags.Items.INGOTS);
+        public Ingredient getRepairIngredient() {
+            return null;
         }
     };
 }

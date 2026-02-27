@@ -18,6 +18,14 @@ public class ModItems {
 
     public static Map<Holder<Item>, String> MOD_ITEMS = new HashMap<>();
 
+    // Adamantium
+    public static final Holder<Item> RAW_ADAMANTIUM = register("raw_adamantium", "Raw Adamantium", () -> new Item(new Item.Properties()));
+    public static final Holder<Item> ADAMANTIUM_INGOT = register("adamantium_ingot", "Adamantium Ingot", () -> new Item(new Item.Properties()));
+    public static final Holder<Item> ADAMANTIUM_DUST = register("adamantium_dust", "Adamantium Dust", () -> new Item(new Item.Properties()));
+    public static final Holder<Item> ADAMANTIUM_NIGGET = register("adamantium_nugget", "Adamantium Nugget", () -> new Item(new Item.Properties()));
+    public static final Holder<Item> ADAMANTIUM_UPGRADE_SMITHING_TEMPLATE = registerSimpleItem("adamantium_upgrade_smithing_template", "Adamantium Upgrade Smithing Template");
+
+    // Other
     public static final Holder<Item> COMPRESSED_NETHERRACK = registerSimpleBlockItem("compressed_netherrack", ModBlocks.COMPRESSED_NETHERRACK);
     public static final Holder<Item> CREST_UPGRADE_SMITHING_TEMPLATE = registerSimpleItem("crest_upgrade_smithing_template", "Crest Upgrade Smithing Template");
     public static final Holder<Item> DRACONIC_TWIN_SWORD = register("draconic_twin_sword", "Draconic Twin Sword", () -> new SwordItem(Tiers.NETHERITE, new Item.Properties()));

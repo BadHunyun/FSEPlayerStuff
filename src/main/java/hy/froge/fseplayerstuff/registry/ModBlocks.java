@@ -18,28 +18,18 @@ public class ModBlocks {
 
     public static Map<Holder<Block>, String> MOD_BLOCKS = new HashMap<>();
 
-    public static final Holder<Block> BRUST_BLOCK = register("brust_block", "Brust Block", BlockBehaviour.Properties.of()
-            .sound(SoundType.NETHERITE_BLOCK)
-            .strength(10, 100)
-            .requiresCorrectToolForDrops()
-    );
-    public static final Holder<Block> COMPRESSED_NETHERRACK = register("compressed_netherrack", "Compressed Netherrack", BlockBehaviour.Properties.of()
-            .sound(SoundType.NETHERRACK)
-            .strength(4, 1)
-            .requiresCorrectToolForDrops()
-    );
-    public static final Holder<Block> COMPRESSED_DIAMOND = register("compressed_diamond_block", "Compressed Diamond Block", BlockBehaviour.Properties.of()
-            .strength(6, 1)
-            .requiresCorrectToolForDrops()
-    );
-    public static final Holder<Block> COMPRESSED_EMERALD = register("compressed_emerald_block", "Compressed Emerald Block", BlockBehaviour.Properties.of()
-            .strength(6, 1)
-            .requiresCorrectToolForDrops()
-    );
-    public static final Holder<Block> COMPRESSED_NETHERITE = register("compressed_netherite_block", "Compressed Netherite Block", BlockBehaviour.Properties.of()
-            .strength(10, 100)
+    // Adamantium
+    public static final Holder<Block> ADAMANTIUM_ORE = register("adamantium_ore", "Adamantium Ore", BlockBehaviour.Properties.of());
+    public static final Holder<Block> ADAMANTIUM_BLOCK = register("adamantium_block", "Block of Adamantium", BlockBehaviour.Properties.of());
+    public static final Holder<Block> RAW_ADAMANTIUM_BLOCK = register("raw_adamantium_block", "Block of Raw Adamantium", BlockBehaviour.Properties.of());
 
-    );
+    public static final Holder<Block> BRUST_BLOCK = register("brust_block", "Brust Block", BlockBehaviour.Properties.of().sound(SoundType.NETHERITE_BLOCK).strength(10, 100).requiresCorrectToolForDrops());
+    // Compressed Blocks
+    public static final Holder<Block> COMPRESSED_NETHERRACK = register("compressed_netherrack", "Compressed Netherrack", BlockBehaviour.Properties.of().sound(SoundType.NETHERRACK).strength(4, 1).requiresCorrectToolForDrops());
+    public static final Holder<Block> COMPRESSED_DIAMOND = register("compressed_diamond_block", "Compressed Diamond Block", BlockBehaviour.Properties.of().strength(6, 1).requiresCorrectToolForDrops());
+    public static final Holder<Block> COMPRESSED_EMERALD = register("compressed_emerald_block", "Compressed Emerald Block", BlockBehaviour.Properties.of().strength(6, 1).requiresCorrectToolForDrops());
+    public static final Holder<Block> COMPRESSED_NETHERITE = register("compressed_netherite_block", "Compressed Netherite Block", BlockBehaviour.Properties.of().strength(10, 100));
+
     public static final Holder<Block> RAW_IMMORTAL_BLOCK = register("raw_immortal_block", "Raw Immortal Block", BlockBehaviour.Properties.of());
     public static final Holder<Block> IMMORTAL_BLOCK = register("immortal_block", "Block of Immotral", BlockBehaviour.Properties.of());
     public static final Holder<Block> N_FESH_DOLL = register("n_fesh_doll", "N_FeSH Doll", () -> new BlockDoll(BlockBehaviour.Properties.of().destroyTime(3f)));
