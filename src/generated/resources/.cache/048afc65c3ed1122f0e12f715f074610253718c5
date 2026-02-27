@@ -1,4 +1,4 @@
-// 1.21.1	2026-02-26T17:05:12.7258487	Item Models: fseplayerstuff
+// 1.21.1	2026-02-28T00:09:21.0407806	Item Models: fseplayerstuff
 21518e074de9c83ab8472bf50e6c966161f3caa1 assets/fseplayerstuff/models/item/crest_upgrade_smithing_template.json
 4a3be17941d011cd9a93ae9470bbd46babc0df18 assets/fseplayerstuff/models/item/draconic_twin_sword.json
 2598553ed9e18c233afcc948491411406145aaf1 assets/fseplayerstuff/models/item/dreamflayer.json
@@ -8,7 +8,10 @@
 6253835aa58413b1d7995b67cd36ba1caa2480cd assets/fseplayerstuff/models/item/fork_core.json
 be454c2ea613745b5cc370073fcc002dec3e4398 assets/fseplayerstuff/models/item/glass_crest.json
 63a71c66e38943a752f7ff0df4965bcdfd27f56e assets/fseplayerstuff/models/item/glass_crest_core.json
+fa5a0258668ce0c0ded0374e8dc4baa769dd1dcd assets/fseplayerstuff/models/item/grave_digger.json
 ccf93fd5eb6ade1f1e22d9c9211f96bbf4921f83 assets/fseplayerstuff/models/item/heavy_upgrade_smithing_template.json
+6ddd271c11cbcbfd23d32598086d875000c4b5f0 assets/fseplayerstuff/models/item/high_performance_explosive.json
+ba2d5710a528ff2f73bc8904e7d3d43bb07b9149 assets/fseplayerstuff/models/item/huge_wrench.json
 818067454c56bd8fd59fd24386fa229f481eb123 assets/fseplayerstuff/models/item/malachite_reat_sword.json
 3a8729033d691ed2f819426c775f56ca99c92e84 assets/fseplayerstuff/models/item/mirror_core.json
 68959e513775628ab0241f52860c763a89397193 assets/fseplayerstuff/models/item/nightmare.json

@@ -1,29 +1,29 @@
-package hy.froge.fseplayerstuff.item;
+package hy.froge.fseplayerstuff.item.brust;
 
-import hy.froge.fseplayerstuff.registry.ModItems;
+import net.minecraft.resources.ResourceKey;
 import net.minecraft.tags.BlockTags;
 import net.minecraft.tags.TagKey;
-import net.minecraft.world.item.PickaxeItem;
 import net.minecraft.world.item.Tier;
 import net.minecraft.world.item.crafting.Ingredient;
 import net.minecraft.world.level.block.Block;
+import net.neoforged.neoforge.common.Tags;
 import org.jetbrains.annotations.NotNull;
 
-public class DiamondAlloyPickaxeItem extends PickaxeItem {
+public class BrustTier {
     public static final Tier TIER = new Tier() {
         @Override
         public int getUses() {
-            return 4096;
+            return 250;
         }
 
         @Override
         public float getSpeed() {
-            return 3;
+            return 6;
         }
 
         @Override
         public float getAttackDamageBonus() {
-            return 0;
+            return 2;
         }
 
         @Override
@@ -33,16 +33,12 @@ public class DiamondAlloyPickaxeItem extends PickaxeItem {
 
         @Override
         public int getEnchantmentValue() {
-            return 42;
+            return 14;
         }
 
         @Override
         public @NotNull Ingredient getRepairIngredient() {
-            return Ingredient.of(ModItems.DIAMOND_ALLOY.value());
+            return Ingredient.of(Tags.Items.INGOTS);
         }
     };
-
-    public DiamondAlloyPickaxeItem(Properties properties) {
-        super(TIER, properties);
-    }
 }

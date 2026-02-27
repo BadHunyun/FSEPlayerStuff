@@ -29,6 +29,7 @@ public class FSEDataGenerator extends DataGenerator {
         generator.addProvider(event.includeClient(), new FSELanguageProvider(output));
         generator.addProvider(event.includeClient(), new FSEModelProvider.ItemProvider(output, existingFileHelper));
         generator.addProvider(event.includeClient(), new FSEModelProvider.StateProvider(output, existingFileHelper));
+        generator.addProvider(event.includeServer(), new FSEBlockTagProvider(output, lookupProvider, existingFileHelper));
 //        generator.addProvider(event.includeClient(), new FSEModelProvider.BlockProvider(output, existingFileHelper));
     }
 }
