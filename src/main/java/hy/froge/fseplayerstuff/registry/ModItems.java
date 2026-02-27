@@ -2,12 +2,11 @@ package hy.froge.fseplayerstuff.registry;
 
 import hy.froge.fseplayerstuff.FSEPlayerStuff;
 import hy.froge.fseplayerstuff.item.DiamondAlloyPickaxeItem;
-import hy.froge.fseplayerstuff.item.ItemHugeWrench;
+import hy.froge.fseplayerstuff.item.HugeWrenchItem;
 import net.minecraft.core.Holder;
 import net.minecraft.core.registries.Registries;
 import net.minecraft.world.item.*;
 import net.minecraft.world.level.block.Block;
-import net.minecraft.world.level.block.state.BlockBehaviour;
 import net.neoforged.neoforge.registries.DeferredRegister;
 import org.jetbrains.annotations.NotNull;
 
@@ -33,7 +32,7 @@ public class ModItems {
     public static final Holder<Item> GLASS_CREST = registerSimpleItem("glass_crest", "Glass Crest");
     public static final Holder<Item> GLASS_CREST_CORE = registerSimpleItem("glass_crest_core", "Glass Crest Core");
     public static final Holder<Item> HEAVY_UPGRADE_SMITHING_TEMPLATE = registerSimpleItem("heavy_upgrade_smithing_template", "Heavy Upgrade Smithing Template");
-    public static final Holder<Item> HUGE_WRENCH = register("huge_wrench", "Huge Wrench", () -> new ItemHugeWrench(new Item.Properties().rarity(Rarity.EPIC).durability(1)));
+    public static final Holder<Item> HUGE_WRENCH = register("huge_wrench", "Huge Wrench", () -> new HugeWrenchItem(new Item.Properties().rarity(Rarity.EPIC).durability(1)));
     public static final Holder<Item> IMMOTRAL_BLOCK = registerSimpleBlockItem("immotral_block", ModBlocks.IMMORTAL_BLOCK);
     public static final Holder<Item> MALACHITE_REAT_SWORD = register("malachite_reat_sword", "Malachite Rest Sword", () -> new Item(new Item.Properties()));
     public static final Holder<Item> MIRROR_CORE = registerSimpleItem("mirror_core", "Mirror Core");
@@ -57,8 +56,8 @@ public class ModItems {
         return register(id, name, () -> new Item(new Item.Properties()));
     }
 
-    private static Holder<Item> registerBlockItem(String id, @NotNull Holder<Block> blockHolder, Item.Properties properties) {
-        return DEFERRED_REGISTER.register(id, () -> new BlockItem(blockHolder.value(), properties));
+    private static Holder<Item> registerBlockItem(String id, @NotNull Holder<Block> blockHolder, Item.Properties itemProp) {
+        return DEFERRED_REGISTER.register(id, () -> new BlockItem(blockHolder.value(), itemProp));
     }
 
     private static Holder<Item> registerSimpleBlockItem(String id, @NotNull final Holder<Block> blockHolder) {

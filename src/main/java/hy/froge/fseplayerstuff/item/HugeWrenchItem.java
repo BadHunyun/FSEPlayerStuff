@@ -12,8 +12,8 @@ import org.jetbrains.annotations.NotNull;
 
 import java.util.List;
 
-public class ItemHugeWrench extends Item {
-    public ItemHugeWrench(Properties properties) {
+public class HugeWrenchItem extends Item {
+    public HugeWrenchItem(Properties properties) {
         super(properties);
     }
 
