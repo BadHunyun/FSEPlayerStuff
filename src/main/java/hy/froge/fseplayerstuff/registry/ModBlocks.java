@@ -5,8 +5,11 @@ import hy.froge.fseplayerstuff.block.BlockDoll;
 import net.minecraft.core.Holder;
 import net.minecraft.core.registries.Registries;
 import net.minecraft.world.level.block.Block;
+import net.minecraft.world.level.block.LiquidBlock;
 import net.minecraft.world.level.block.SoundType;
 import net.minecraft.world.level.block.state.BlockBehaviour;
+import net.minecraft.world.level.material.FlowingFluid;
+import net.minecraft.world.level.material.PushReaction;
 import net.neoforged.neoforge.registries.DeferredRegister;
 import org.jetbrains.annotations.NotNull;
 
@@ -19,11 +22,14 @@ public class ModBlocks {
     public static Map<Holder<Block>, String> MOD_BLOCKS = new HashMap<>();
 
     // Adamantium
-    public static final Holder<Block> ADAMANTIUM_ORE = register("adamantium_ore", "Adamantium Ore", BlockBehaviour.Properties.of());
-    public static final Holder<Block> ADAMANTIUM_BLOCK = register("adamantium_block", "Block of Adamantium", BlockBehaviour.Properties.of());
-    public static final Holder<Block> RAW_ADAMANTIUM_BLOCK = register("raw_adamantium_block", "Block of Raw Adamantium", BlockBehaviour.Properties.of());
+    public static final Holder<Block> ADAMANTIUM_ORE = register("adamantium_ore", "Adamantium Ore", BlockBehaviour.Properties.of().requiresCorrectToolForDrops());
+    public static final Holder<Block> ADAMANTIUM_BLOCK = register("adamantium_block", "Block of Adamantium", BlockBehaviour.Properties.of().requiresCorrectToolForDrops());
+    public static final Holder<Block> RAW_ADAMANTIUM_BLOCK = register("raw_adamantium_block", "Block of Raw Adamantium", BlockBehaviour.Properties.of().requiresCorrectToolForDrops());
 
     public static final Holder<Block> BRUST_BLOCK = register("brust_block", "Brust Block", BlockBehaviour.Properties.of().sound(SoundType.NETHERITE_BLOCK).strength(10, 100).requiresCorrectToolForDrops());
+    // Immortal
+    public static final Holder<Block> MOLTEN_IMMORTAL = register("molten_immortal", "Molten Immortal", () -> new LiquidBlock((FlowingFluid) ModFluids.MOLTEN_IMMORTAL.value(), BlockBehaviour.Properties.of().replaceable().noCollission().strength(100.0F).pushReaction(PushReaction.DESTROY).noLootTable().liquid().sound(SoundType.EMPTY)));
+
     // Compressed Blocks
     public static final Holder<Block> COMPRESSED_NETHERRACK = register("compressed_netherrack", "Compressed Netherrack", BlockBehaviour.Properties.of().sound(SoundType.NETHERRACK).strength(4, 1).requiresCorrectToolForDrops());
     public static final Holder<Block> COMPRESSED_DIAMOND = register("compressed_diamond_block", "Compressed Diamond Block", BlockBehaviour.Properties.of().strength(6, 1).requiresCorrectToolForDrops());

@@ -1,6 +1,7 @@
 package hy.froge.fseplayerstuff.registry;
 
 import hy.froge.fseplayerstuff.FSEPlayerStuff;
+import hy.froge.fseplayerstuff.fluid.immortal.MoltenImmortalFluid;
 import hy.froge.fseplayerstuff.item.HugeWrenchItem;
 import net.minecraft.core.Holder;
 import net.minecraft.core.registries.Registries;
@@ -24,6 +25,9 @@ public class ModItems {
     public static final Holder<Item> ADAMANTIUM_DUST = register("adamantium_dust", "Adamantium Dust", () -> new Item(new Item.Properties()));
     public static final Holder<Item> ADAMANTIUM_NIGGET = register("adamantium_nugget", "Adamantium Nugget", () -> new Item(new Item.Properties()));
     public static final Holder<Item> ADAMANTIUM_UPGRADE_SMITHING_TEMPLATE = registerSimpleItem("adamantium_upgrade_smithing_template", "Adamantium Upgrade Smithing Template");
+
+    // Immortal
+    public static final Holder<Item> IMMORTAL_BUCKET = register("molten_immortal_bucket", "Molten Immortal Bucket", () -> new BucketItem(ModFluids.MOLTEN_IMMORTAL.value(), new Item.Properties().stacksTo(1)));
 
     // Other
     public static final Holder<Item> COMPRESSED_NETHERRACK = registerSimpleBlockItem("compressed_netherrack", ModBlocks.COMPRESSED_NETHERRACK);
