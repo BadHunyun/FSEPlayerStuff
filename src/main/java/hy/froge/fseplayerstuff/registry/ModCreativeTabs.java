@@ -10,11 +10,14 @@ import net.neoforged.neoforge.registries.DeferredRegister;
 public class ModCreativeTabs {
     public static final DeferredRegister<CreativeModeTab> DEFERRED_REGISTER = DeferredRegister.create(Registries.CREATIVE_MODE_TAB, FSEPlayerStuff.MOD_ID);
 
-    public static final Holder<CreativeModeTab> FSE_PLAYER_STUFF = DEFERRED_REGISTER.register("fse_player_stuff", () -> CreativeModeTab.builder()
-            .title(Component.literal("FSE Player Stuff"))
-            .icon(() -> ModItems.MOD_DOLL.value().getDefaultInstance())
-            .displayItems((itemDisplayParameters, output) ->
-                    ModItems.DEFERRED_REGISTER.getEntries().forEach(k ->
-                            output.accept(k.get())))
-            .build());
+    public static final Holder<CreativeModeTab> FSE_PLAYER_STUFF = DEFERRED_REGISTER.register("fse_player_stuff", () ->
+            CreativeModeTab.builder()
+                    .title(Component.literal("FSE Player Stuff"))
+                    .icon(FSERegistry.Blocks.MOD_DOLL::asStack)
+                    .displayItems((itemDisplayParameters, output) ->
+                            FSERegistry.REGISTRIES.getAll(Registries.ITEM).forEach(k ->
+                                    output.accept(k.get().getDefaultInstance())
+                            )
+                    )
+                    .build());
 }
