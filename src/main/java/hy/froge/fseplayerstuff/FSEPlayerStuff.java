@@ -13,8 +13,7 @@ public class FSEPlayerStuff {
     private static final Logger LOGGER = LogUtils.getLogger();
 
     public FSEPlayerStuff(IEventBus modEventBus, ModContainer modContainer) {
-        ModCreativeTabs.DEFERRED_REGISTER.register(modEventBus);
-
+        ModCreativeTabs.register(modEventBus);
         FSERegistry.register(modEventBus);
     }
 }

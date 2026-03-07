@@ -8,13 +8,15 @@ import hy.froge.fseplayerstuff.FSEPlayerStuff;
 import hy.froge.fseplayerstuff.block.DollBlock;
 import hy.froge.fseplayerstuff.item.HugeWrenchItem;
 import net.createmod.catnip.lang.FontHelper;
+import net.minecraft.world.item.CreativeModeTab;
 import net.neoforged.bus.api.IEventBus;
+import net.neoforged.neoforge.registries.DeferredHolder;
 
 public class FSERegistry {
     static final CreateRegistrate REGISTRIES = CreateRegistrate.create(FSEPlayerStuff.MOD_ID);
 
     static {
-        REGISTRIES.defaultCreativeTab(ModCreativeTabs.FSE_PLAYER_STUFF);
+        REGISTRIES.setCreativeTab((DeferredHolder<CreativeModeTab, CreativeModeTab>) ModCreativeTabs.FSE_PLAYER_STUFF);
         REGISTRIES.setTooltipModifierFactory(item -> new ItemDescription.Modifier(item, FontHelper.Palette.STANDARD_CREATE));
     }
 
@@ -27,10 +29,6 @@ public class FSERegistry {
     }
 
     public static class Blocks {
-        public static final BlockEntry<?> MOD_DOLL = REGISTRIES.block("mod_doll", DollBlock::new)
-                .initialProperties(() -> net.minecraft.world.level.block.Blocks.WHITE_WOOL)
-                .properties(p -> p.strength(2, 5))
-                .lang("N_FeSH Doll")
-                .register();
+        public static final BlockEntry<?> MOD_DOLL = REGISTRIES.block("mod_doll", DollBlock::new).initialProperties(() -> net.minecraft.world.level.block.Blocks.WHITE_WOOL).properties(p -> p.strength(2, 5)).lang("N_FeSH Doll").register();
     }
 }
