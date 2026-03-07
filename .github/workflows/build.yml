@@ -21,3 +21,4 @@ jobs:
           gradle-version: wrapper
       - name: "generate_data"
         run: "./gradlew downloadAssets compileJava runData"
+        working-directory: "./FSEPlayerStuff/"
