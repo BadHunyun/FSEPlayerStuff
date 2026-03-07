@@ -1,7 +1,7 @@
 package hy.froge.fseplayerstuff.registry;
 
 import hy.froge.fseplayerstuff.FSEPlayerStuff;
-import hy.froge.fseplayerstuff.block.BlockDoll;
+import hy.froge.fseplayerstuff.block.DollBlock;
 import net.minecraft.core.Holder;
 import net.minecraft.core.registries.Registries;
 import net.minecraft.world.level.block.Block;
@@ -18,7 +18,7 @@ public class ModBlocks {
 
     public static Map<Holder<Block>, String> MOD_BLOCKS = new HashMap<>();
 
-    public static final Holder<Block> MOD_DOLL = register("mod_doll", "N_FeSH's Doll", () -> new BlockDoll(BlockBehaviour.Properties.ofFullCopy(Blocks.WHITE_WOOL)));
+    public static final Holder<Block> MOD_DOLL = register("mod_doll", "N_FeSH's Doll", () -> new DollBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.WHITE_WOOL)));
 
     private static Holder<Block> register(String id, String name, @NotNull final Supplier<? extends Block> blockSup) {
         Holder<Block> target = DEFERRED_REGISTER.register(id, blockSup);

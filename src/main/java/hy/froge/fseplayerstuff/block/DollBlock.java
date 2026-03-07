@@ -17,10 +17,10 @@ import net.minecraft.world.phys.BlockHitResult;
 import org.jetbrains.annotations.NotNull;
 import org.jetbrains.annotations.Nullable;
 
-public class BlockDoll extends Block {
+public class DollBlock extends Block {
     public static final DirectionProperty FACING = HorizontalDirectionalBlock.FACING;
 
-    public BlockDoll(Properties properties) {
+    public DollBlock(Properties properties) {
         super(properties);
     }
 
