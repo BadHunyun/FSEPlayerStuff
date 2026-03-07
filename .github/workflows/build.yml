@@ -20,6 +20,7 @@ jobs:
         with:
           gradle-version: wrapper
   gen_data:
-    - name: "generate_data"
-      run: "./gradlew downloadAssets compileJava runData"
-      working-directory: "./FSEPlayerStuff/"
+    steps:
+      - name: "generate_data"
+        run: "./gradlew downloadAssets compileJava runData"
+        working-directory: "./FSEPlayerStuff/"
