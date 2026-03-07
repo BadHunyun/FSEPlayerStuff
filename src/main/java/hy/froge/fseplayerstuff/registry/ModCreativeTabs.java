@@ -12,7 +12,7 @@ public class ModCreativeTabs {
 
     public static final Holder<CreativeModeTab> FSE_PLAYER_STUFF = DEFERRED_REGISTER.register("fse_player_stuff", () -> CreativeModeTab.builder()
             .title(Component.literal("FSE Player Stuff"))
-            .icon(() -> ModItems.N_FESH_DOLL.value().getDefaultInstance())
+            .icon(() -> ModItems.MOD_DOLL.value().getDefaultInstance())
             .displayItems((itemDisplayParameters, output) ->
                     ModItems.DEFERRED_REGISTER.getEntries().forEach(k ->
                             output.accept(k.get())))

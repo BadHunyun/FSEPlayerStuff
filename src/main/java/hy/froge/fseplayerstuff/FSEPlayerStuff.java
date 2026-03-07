@@ -16,7 +16,8 @@ public class FSEPlayerStuff {
     private static final Logger LOGGER = LogUtils.getLogger();
 
     public FSEPlayerStuff(IEventBus modEventBus, ModContainer modContainer) {
-        ModFluids.DEFERRED_REGISTER.register(modEventBus);
+        ModFluids.Fluids.DEFERRED_REGISTER.register(modEventBus);
+        ModFluids.FluidTypes.DEFERRED_REGISTER.register(modEventBus);
         ModBlocks.DEFERRED_REGISTER.register(modEventBus);
         ModItems.DEFERRED_REGISTER.register(modEventBus);
         ModCreativeTabs.DEFERRED_REGISTER.register(modEventBus);
