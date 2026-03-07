@@ -20,4 +20,4 @@ jobs:
         with:
           gradle-version: wrapper
       - name: "generate_data"
-        run: "./gradlew compileJava runData"
+        run: "./gradlew downloadAssets compileJava runData"
