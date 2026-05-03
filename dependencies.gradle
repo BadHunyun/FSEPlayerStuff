@@ -1,0 +1,9 @@
+repositories {
+    maven { // Registrate
+        url = "https://maven.ithundxr.dev/snapshots"
+    }
+}
+
+dependencies {
+    jarJar implementation("com.tterrag.registrate:Registrate:${registrate_version}")
+}
