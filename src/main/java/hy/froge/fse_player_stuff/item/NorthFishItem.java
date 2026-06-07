@@ -16,8 +16,8 @@ import java.util.List;
 
 import static hy.froge.fse_player_stuff.FSEPlayerStuff.location;
 
-public class HugeWrenchItem extends Item {
-    public HugeWrenchItem(Properties properties) {
+public class NorthFishItem extends Item {
+    public NorthFishItem(Properties properties) {
         super(properties);
     }
 
@@ -27,7 +27,7 @@ public class HugeWrenchItem extends Item {
                 .add(
                         Attributes.ATTACK_DAMAGE,
                         new AttributeModifier(
-                                location("huge_wrench_dmg"),
+                                location("north_fish_dmg"),
                                 Integer.MAX_VALUE, AttributeModifier.Operation.ADD_VALUE
                         ),
                         EquipmentSlotGroup.MAINHAND
@@ -52,7 +52,7 @@ public class HugeWrenchItem extends Item {
 
     @Override
     public void appendHoverText(@NotNull ItemStack itemStack, @NotNull TooltipContext tooltipContext, @NotNull List<Component> components, @NotNull TooltipFlag tooltipFlag) {
-        components.add(Component.translatable("item.fse_player_stuff.huge_wrench.tooltip"));
+        components.add(Component.translatable("item.fse_player_stuff.north_fish.tooltip"));
         super.appendHoverText(itemStack, tooltipContext, components, tooltipFlag);
     }
 }

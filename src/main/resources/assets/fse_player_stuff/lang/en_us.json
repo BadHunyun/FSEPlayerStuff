@@ -1,6 +1,6 @@
 {
   "itemGroup.fse_player_stuff": "Example Mod Tab",
-  "item.fse_player_stuff.huge_wrench.tooltip": "A huge wrench",
+  "item.fse_player_stuff.north_fish.tooltip": "A huge Fish",
   "item.fse_player_stuff.brass_torch.on_use0": "North_Fish joined the game.",
   "item.fse_player_stuff.brass_torch.on_use1": "[System] <North_Fish> Never gonna give %s up",
   "item.fse_player_stuff.brass_torch.on_use2": "North_Fish left the game."

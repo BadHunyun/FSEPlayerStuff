@@ -12,8 +12,6 @@ public class StationManagerBlockEntity extends BlockEntity {
     }
 
     public StationManagerBlockEntity(BlockPos blockPos, BlockState blockState) {
-        super(FSERegistry.BlockEntities.STATION_MANAGE.get(), blockPos, blockState);
+        super(FSERegistry.BlockEntities.STATION_MANAGER.get(), blockPos, blockState);
     }
-
-
 }

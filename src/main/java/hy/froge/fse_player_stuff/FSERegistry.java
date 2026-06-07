@@ -4,11 +4,13 @@ import com.tterrag.registrate.Registrate;
 import com.tterrag.registrate.util.entry.BlockEntityEntry;
 import com.tterrag.registrate.util.entry.BlockEntry;
 import com.tterrag.registrate.util.entry.ItemEntry;
+import hy.froge.fse_player_stuff.block.CircuitStackBlock;
 import hy.froge.fse_player_stuff.block.apg.ElectricFence;
 import hy.froge.fse_player_stuff.block.apg.ElectricFenceGate;
 import hy.froge.fse_player_stuff.block.stationfacility.StationManagerBlock;
 import hy.froge.fse_player_stuff.block.stationfacility.entity.StationManagerBlockEntity;
-import hy.froge.fse_player_stuff.item.HugeWrenchItem;
+import hy.froge.fse_player_stuff.item.BrassTorchItem;
+import hy.froge.fse_player_stuff.item.NorthFishItem;
 import net.minecraft.core.Holder;
 import net.minecraft.core.registries.Registries;
 import net.minecraft.network.chat.Component;
@@ -50,6 +52,31 @@ public class FSERegistry {
                 .block("station_manager", StationManagerBlock::new)
                 .lang("Station Manager")
                 .register();
+
+        public static final BlockEntry<CircuitStackBlock> SILICON_CIRCUIT_STACK = REGISTRATE
+                .block("silicon_base_stack", CircuitStackBlock::new)
+                .lang("Silicon Base Stack")
+                .simpleItem()
+                .register();
+
+        public static final BlockEntry<CircuitStackBlock> ENGINEERING_CIRCUIT_STACK = REGISTRATE
+                .block("engineering_base_stack", CircuitStackBlock::new)
+                .lang("Engineering Base Stack")
+                .simpleItem()
+                .register();
+
+        public static final BlockEntry<CircuitStackBlock> LOGIC_CIRCUIT_STACK = REGISTRATE
+                .block("logic_base_stack", CircuitStackBlock::new)
+                .lang("Logic Base Stack")
+                .simpleItem()
+                .register();
+
+        public static final BlockEntry<CircuitStackBlock> CALCULATE_CIRCUIT_STACK = REGISTRATE
+                .block("calculate_base_stack", CircuitStackBlock::new)
+                .lang("Calculate Base Stack")
+                .simpleItem()
+                .register();
+
     }
 
     public static class BlockEntities {
@@ -57,7 +84,7 @@ public class FSERegistry {
             LOGGER.info("Registering Block Entities...");
         }
 
-        public static final BlockEntityEntry<BlockEntity> STATION_MANAGE = REGISTRATE
+        public static final BlockEntityEntry<BlockEntity> STATION_MANAGER = REGISTRATE
                 .blockEntity("station_manager", StationManagerBlockEntity::new)
                 .validBlocks(Blocks.STATION_MANAGER)
                 .register();
@@ -68,9 +95,14 @@ public class FSERegistry {
             LOGGER.info("Registering Items...");
         }
 
-        public static final ItemEntry<HugeWrenchItem> HUGE_WRENCH = REGISTRATE
-                .item("huge_wrench", HugeWrenchItem::new)
-                .lang("Huge Wrench")
+        public static final ItemEntry<NorthFishItem> NORTH_FISH = REGISTRATE
+                .item("north_fish", NorthFishItem::new)
+                .lang("North Fish")
+                .register();
+
+        public static final ItemEntry<BrassTorchItem> BRASS_TORCH = REGISTRATE
+                .item("brass_torch", BrassTorchItem::new)
+                .lang("Brass Torch")
                 .register();
     }
 
@@ -80,23 +112,18 @@ public class FSERegistry {
         }
     }
 
-    public static class Components {
-        public static void register() {
-        }
-//
-//        public static final SJT_COMPONENT
-    }
-
     public static class CreativeTabs {
         public static void register(IEventBus bus) {
             CREATIVE_TABS.register(bus);
         }
 
-        private static final DeferredRegister<CreativeModeTab> CREATIVE_TABS = DeferredRegister.create(Registries.CREATIVE_MODE_TAB, MOD_ID);
+        private static final DeferredRegister<CreativeModeTab> CREATIVE_TABS =
+                DeferredRegister.create(Registries.CREATIVE_MODE_TAB, MOD_ID);
 
-        private static final @NotNull Holder<CreativeModeTab> MOD_TAB = CREATIVE_TABS.register(MOD_ID, () -> CreativeModeTab.builder()
-                .title(Component.translatable("itemGroup.fse_player_stuff"))
-                .build());
+        private static final @NotNull Holder<CreativeModeTab> MOD_TAB = CREATIVE_TABS.register(MOD_ID, () ->
+                CreativeModeTab.builder()
+                        .title(Component.translatable("itemGroup.fse_player_stuff"))
+                        .build());
     }
 
     public static void registerAll(IEventBus bus) {
